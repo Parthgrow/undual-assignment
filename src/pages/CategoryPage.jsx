@@ -91,7 +91,10 @@ const CategoryPage = () => {
 
   return (
     <div>
-      <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-3 flex-wrap border-2 border-black p-2">
+        <h1 className="text-xl text-white bg-black py-2 px-4 rounded-md">
+          Categories
+        </h1>
         {categories.map((category) => {
           // Normalize the category name for comparison with URL param
           const normalizedCategoryName = category.name
@@ -116,7 +119,7 @@ const CategoryPage = () => {
       </div>
 
       {products.length > 0 ? (
-        <div className="grid grid-cols">
+        <div className="grid grid-cols-5 border-2 border-black my-4 p-2">
           {products.map((product, index) => (
             <div
               key={`${product.id}-${currentCategory}-${index}`}
